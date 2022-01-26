@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<form action='/' method = 'post'>
+			<input placeholder='Name' name='name'>
+			<input placeholder="Text" name='post'>
+			<input type='submit' value='Submit'>
+		</form>
+		{% for post in posts %}
+		<div>{{ posts[post]["name"] + ':\n' + posts[post]["content"] + '\n'}}</div>
+		{% endfor %}
+	</body>
+</html>
